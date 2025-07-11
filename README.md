@@ -9,44 +9,18 @@ A simple implementation of a text-to-image diffusion model for learning purposes
 - **Simple architecture**: U-Net with diffusion scheduling
 - **Text conditioning**: Basic text encoder with transformer layers
 
-## Quick Start
-
-### Installation
-
-```bash
-pip install -e .
-```
-
-### Training
-
-**Unconditional model** (generates random digits):
-```bash
-python train.py
-```
-
-**Text-conditioned model** (generates specific digits from prompts):
-```bash
-python train_conditioned.py
-```
-
-### Generation
-
-**Unconditional generation**:
-```bash
-python generate.py
-```
-
-**Text-conditioned generation**:
-```bash
-python generate_conditioned.py
-```
-
 ## Examples
 
 The model can generate digits from prompts like:
 - "handwritten digit five"
 - "digit 7"
 - "nine"
+
+### Unconditional Generation (Random Digits)
+![Unconditional Generation](images/generated_images.png)
+
+### Text-Conditioned Generation
+![Text-Conditioned Generation](images/conditioned_images_handwritten_digit_eight.png)
 
 ## Models
 
