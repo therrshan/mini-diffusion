@@ -59,5 +59,6 @@ outputs/
 *.ckpt
 *.pt
 *.bin
+*.pyc
 
 models/

@@ -259,7 +259,6 @@ def main():
         num_epochs=args.epochs,
         batch_size=args.batch_size,
         lr=args.lr,
-        tokenizer_type=args.tokenizer,
         tokenizer_type=args.tokenizer
     )
 
