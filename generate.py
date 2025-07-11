@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from src.models import SimpleUNet, DDPMScheduler
 import os
 
-def generate_images(model_path="models/model_epoch_20.pth", num_images=8, num_steps=1000):
+def generate_images(model_path="models/final_model.pth", num_images=8, num_steps=1000):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Using device: {device}")
     
@@ -49,7 +49,7 @@ def quick_generate(model_path="models/final_model.pth", num_images=4, num_steps=
     generate_images(model_path, num_images, num_steps)
 
 if __name__ == "__main__":
-    if os.path.exists("models/model_epoch_20.pth"):
+    if os.path.exists("models/final_model.pth"):
         generate_images()
     elif any(f.startswith("model_epoch_") for f in os.listdir("models") if f.endswith(".pth")):
         latest_epoch = max([int(f.split("_")[-1].split(".")[0]) for f in os.listdir("models") if f.startswith("model_epoch_")])
